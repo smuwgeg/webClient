@@ -7,6 +7,11 @@ export default {
       pageSize: 10, // 每页多少条数据
       pageSizes: [10, 20, 30, 200], // 规定一页显示多少条数据
       totalPage: 200, // 总共多少条数据
+      defaultSort: { // 默认按xxx排序
+        prop: 'date',
+        order: 'descending'
+      },
+      multipleSelection: [], // 选中的值
       // 渲染列表表头
       controlArray: [{
           label: '姓名',
@@ -62,6 +67,11 @@ export default {
     // 翻页数据
     handleCurrentChange(val) {
       this.currentPage = val;
+    },
+    // 多选框
+    handleSelectionChange(val) {
+      this.multipleSelection = val;
+      console.log(this.multipleSelection);
     }
   }
 }
