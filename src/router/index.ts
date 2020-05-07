@@ -17,6 +17,12 @@ const routes: Array<RouteConfig> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+  },
+  // 跳转至表格页面
+  {
+    path: '/tablePage',
+    name: 'TablePage',
+    component: () => import('../components/tablePage/index.vue')
   }
 ]
 
